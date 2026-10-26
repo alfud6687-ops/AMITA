@@ -1,0 +1,10 @@
+{
+  "name": "life-of-paradise",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AMITA Karma Insurance (Life of Paradise) static site",
+  "scripts": {
+    "dev": "npx --yes serve@latest . -l 3000",
+    "start": "npx --yes serve@latest . -l 3000"
+  }
+}
