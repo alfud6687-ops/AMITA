@@ -280,8 +280,8 @@ html:has(.intro:not([hidden])) { overflow: hidden; }
   .intro-title { top: 44px; padding: 0 20px; font-size: 18px; }
   .intro-logo { top: 96px; left: 0; }
   .i-track { margin-left: calc(6vw - var(--lw) - var(--lg)); }
-  .intro-q { left: 20px; right: 20px; width: auto; top: auto; bottom: 120px; white-space: normal; font-size: 22px; }
-  .intro-go { left: 50%; top: auto; bottom: 40px; transform: translateX(-50%); width: auto; height: 56px; padding: 0 28px; gap: 16px; font-size: 16px; }
+  .intro-q { left: 20px; right: 20px; width: auto; top: auto; bottom: calc(150px + env(safe-area-inset-bottom, 0px)); white-space: normal; font-size: 22px; }
+  .intro-go { left: 50%; top: auto; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: auto; height: 56px; padding: 0 28px; gap: 16px; font-size: 16px; }
   .intro-go:active { transform: translateX(-50%) scale(.98); }
 }
 }
@@ -308,7 +308,7 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
 .archive.is-open .panel + .panel { border-left-color: transparent; }
 .p-hit { position: absolute; inset: 0; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
 .p-media { position: absolute; inset: 0; overflow: hidden; background: #fff; }
-.p-media img { position: absolute; left: 50%; bottom: 0; height: 74%; width: auto; max-width: none; transform: translateX(-50%); transition: opacity 650ms var(--ax), height 1000ms var(--ax), transform 650ms var(--ax); }
+.p-media img { position: absolute; left: 50%; bottom: 14px; height: 74%; width: auto; max-width: none; transform: translateX(-50%); filter: drop-shadow(0 10px 16px rgba(17,17,18,.16)); transition: opacity 650ms var(--ax), height 1000ms var(--ax), transform 650ms var(--ax); }
 .p-media .p-beast { opacity: 0; height: 80%; transform: translate(-50%, 3%); }
 .panel.is-active .p-media .p-human { opacity: 0; }
 .panel.is-active .p-media .p-beast { opacity: 1; transform: translate(-50%, 0); }
@@ -360,8 +360,8 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
   .panel.is-active .p-media .p-beast { transform: none; }
   .archive.is-open .panel.is-active .p-media img { right: 50%; transform: translateX(50%); }
   .archive.is-open .panel.is-active .p-media .p-beast { height: 62%; bottom: 24%; }
-  .p-label { left: 20px; bottom: 16px; }
-  .p-title { left: 20px; right: 20px; bottom: 20px; }
+  .p-label { left: 20px; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
+  .p-title { left: 20px; right: 20px; bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
   .p-title b { font-size: 40px; white-space: normal; }
   .a-bar { padding: 14px 16px; } .a-bar svg { width: 72px; }
   .a-close { right: 16px; top: 14px; }
