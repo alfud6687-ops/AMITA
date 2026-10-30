@@ -263,11 +263,13 @@ html:has(.intro:not([hidden])) { overflow: hidden; }
 .i-track svg { flex: none; width: var(--lw); height: var(--lh); fill: var(--brand); }
 @keyframes i-loop { to { transform: translate3d(calc(-1 * (var(--lw) + var(--lg))), 0, 0); } }
 .intro-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #fff; }
-.intro-title { position: absolute; left: 0; right: 0; top: calc(62 * var(--u)); margin: 0; text-align: center; font-size: max(16px, calc(38 * var(--u))); line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; }
+.intro-head { position: absolute; left: calc(52 * var(--u)); top: calc(56 * var(--u)); right: calc(52 * var(--u)); text-align: left; }
+.intro-title { position: static; margin: 0; text-align: left; font-size: max(14px, calc(20 * var(--u))); line-height: 1.3; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; }
+.intro-sub { margin: calc(6 * var(--u)) 0 0; font-size: max(12px, calc(16 * var(--u))); line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; }
 .intro-q { position: absolute; left: calc(558 * var(--u)); width: calc(660 * var(--u)); top: calc(893 * var(--u)); margin: 0; white-space: nowrap;
-  font-size: max(15px, calc(31 * var(--u))); line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; text-align: center; }
+  font-size: max(15px, calc(31 * var(--u))); line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; text-align: center; text-transform: uppercase; }
 .intro-go { position: absolute; left: calc(766 * var(--u)); top: calc(960 * var(--u)); width: calc(272 * var(--u)); height: calc(64 * var(--u)); min-height: 48px; min-width: 200px;
-  display: inline-flex; align-items: center; justify-content: center; gap: calc(24 * var(--u)); border: 0; border-radius: var(--r-pill); background: #000; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; gap: calc(24 * var(--u)); border: 0; border-radius: var(--r-pill); background: #000; color: #fff; white-space: nowrap;
   font-size: max(15px, calc(19 * var(--u))); font-weight: 500; cursor: pointer; transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease); }
 .intro-go:hover { background: #222; }
 .intro-go:active { transform: scale(.98); }
@@ -277,7 +279,9 @@ html:has(.intro:not([hidden])) { overflow: hidden; }
 @media (max-width: 767px) and (orientation: portrait) {
   .intro { --lh: 30vw; --lg: 3vw; }
   .intro-stage { position: absolute; inset: 0; left: 0; top: 0; width: auto; height: auto; transform: none; }
-  .intro-title { top: 44px; padding: 0 20px; font-size: 18px; }
+  .intro-head { left: 20px; right: 20px; top: 44px; }
+  .intro-title { font-size: 15px; }
+  .intro-sub { font-size: 12px; margin-top: 4px; }
   .intro-logo { top: 96px; left: 0; }
   .i-track { margin-left: calc(6vw - var(--lw) - var(--lg)); }
   .intro-q { left: 20px; right: 20px; width: auto; top: auto; bottom: calc(150px + env(safe-area-inset-bottom, 0px)); white-space: normal; font-size: 22px; }
