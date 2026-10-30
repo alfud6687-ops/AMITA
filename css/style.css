@@ -318,6 +318,7 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
 .archive.is-open .panel.is-active .p-hit { pointer-events: none; }
 .p-media { position: absolute; inset: 0; overflow: hidden; background: #fff; }
 .p-media img { position: absolute; left: 50%; bottom: 14px; height: 74%; width: auto; max-width: none; transform: translateX(-50%); filter: drop-shadow(0 10px 16px rgba(17,17,18,.16)); transition: opacity 650ms var(--ax), height 1000ms var(--ax), transform 650ms var(--ax); }
+.panel[data-film="munjingui"] .p-media .p-human, .panel[data-film="bokyongsu"] .p-media .p-human { height: 90%; }
 .p-media .p-beast { opacity: 0; height: 80%; transform: translate(-50%, 3%); }
 .panel.is-active .p-media .p-human { opacity: 0; }
 .panel.is-active .p-media .p-beast { opacity: 1; transform: translate(-50%, 0); }
@@ -365,6 +366,7 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
   .panel + .panel { border-left: 0; border-top: 1px solid rgba(0,0,0,.12); }
   .archive.is-open .panel + .panel { border-top-color: transparent; }
   .p-media img { height: 92%; left: auto; right: 8%; transform: none; }
+  .panel[data-film="munjingui"] .p-media .p-human, .panel[data-film="bokyongsu"] .p-media .p-human { height: 95%; }
   .p-media .p-beast { transform: translateY(3%); }
   .panel.is-active .p-media .p-beast { transform: none; }
   .archive.is-open .panel.is-active .p-media img { right: 50%; transform: translateX(50%); }
