@@ -9,8 +9,8 @@
 
 <div class="intro" id="intro" role="region" aria-label="AMITA 인트로">
   <video class="intro-bg" id="intro-bg" autoplay muted loop playsinline preload="auto" poster="videos/intro-bg.jpg" aria-hidden="true" disablepictureinpicture>
-    <source src="videos/intro-bg.mp4" type="video/mp4">
-    <source src="videos/intro-bg.webm" type="video/webm">
+    <source src="videos/intro-bg.mp4?v=2" type="video/mp4">
+    <source src="videos/intro-bg.webm?v=2" type="video/webm">
   </video>
   <div class="intro-stage">
     <div class="intro-head">
@@ -33,16 +33,18 @@
     <div class="a-right">
       <button class="a-pill a-about" type="button" id="a-about">ABOUT</button>
       <button class="a-pill is-dark" type="button" aria-current="page">SENARIO</button>
-      <button class="a-pill is-dark" type="button" data-alang="en" lang="en" aria-pressed="true">English</button>
-      <button class="a-pill" type="button" data-alang="ko" aria-pressed="false">국문</button>
+      <div class="lang-toggle" role="group" aria-label="언어 전환">
+        <button class="lt-opt is-dark" type="button" data-alang="en" lang="en" aria-pressed="true">EN</button>
+        <button class="lt-opt" type="button" data-alang="ko" aria-pressed="false">KO</button>
+      </div>
     </div>
   </div>
   <h2 class="a-q" id="a-q" lang="en">What is your health contents consumption type?</h2>
   <ul class="panels" id="panels">
       <li class="panel" data-i="0" data-film="munjingui">
         <div class="p-media" aria-hidden="true">
-          <img class="p-human" src="img/case/01-munjingui-human.png" alt="">
-          <img class="p-beast" src="img/case/01-munjingui-beast.png" alt="">
+          <img class="p-human" src="img/case/01-munjingui-human.png?v=2" alt="">
+          <img class="p-beast" src="img/case/01-munjingui-beast.png?v=2" alt="">
           <video muted playsinline loop preload="none" controls controlsList="nodownload noplaybackrate" disablepictureinpicture></video>
         </div>
         <span class="p-label" aria-hidden="true"><span class="p-no">01</span><span class="p-name">MUN JIN GUI</span><span class="p-sub">Cognitive Neglect</span></span>
@@ -51,8 +53,8 @@
       </li>
       <li class="panel" data-i="1" data-film="bokyongsu">
         <div class="p-media" aria-hidden="true">
-          <img class="p-human" src="img/case/02-bokyongsu-human.png" alt="">
-          <img class="p-beast" src="img/case/02-bokyongsu-beast.png" alt="">
+          <img class="p-human" src="img/case/02-bokyongsu-human.png?v=2" alt="">
+          <img class="p-beast" src="img/case/02-bokyongsu-beast.png?v=2" alt="">
           <video muted playsinline loop preload="none" controls controlsList="nodownload noplaybackrate" disablepictureinpicture></video>
         </div>
         <span class="p-label" aria-hidden="true"><span class="p-no">02</span><span class="p-name">BOK YONG SU</span><span class="p-sub">Unfiltered Faith</span></span>
@@ -61,8 +63,8 @@
       </li>
       <li class="panel" data-i="2" data-film="jeonpajo">
         <div class="p-media" aria-hidden="true">
-          <img class="p-human" src="img/case/03-jeonpajo-human.png" alt="">
-          <img class="p-beast" src="img/case/03-jeonpajo-beast.png" alt="">
+          <img class="p-human" src="img/case/03-jeonpajo-human.png?v=2" alt="">
+          <img class="p-beast" src="img/case/03-jeonpajo-beast.png?v=2" alt="">
           <video muted playsinline loop preload="none" controls controlsList="nodownload noplaybackrate" disablepictureinpicture></video>
         </div>
         <span class="p-label" aria-hidden="true"><span class="p-no">03</span><span class="p-name">JEONPAJO</span><span class="p-sub">Lie Spread</span></span>
@@ -71,8 +73,8 @@
       </li>
       <li class="panel" data-i="3" data-film="chwaryeongma">
         <div class="p-media" aria-hidden="true">
-          <img class="p-human" src="img/case/04-chwaryeongma-human.png" alt="">
-          <img class="p-beast" src="img/case/04-chwaryeongma-beast.png" alt="">
+          <img class="p-human" src="img/case/04-chwaryeongma-human.png?v=2" alt="">
+          <img class="p-beast" src="img/case/04-chwaryeongma-beast.png?v=2" alt="">
           <video muted playsinline loop preload="none" controls controlsList="nodownload noplaybackrate" disablepictureinpicture></video>
         </div>
         <span class="p-label" aria-hidden="true"><span class="p-no">04</span><span class="p-name">CHWARYEONGMA</span><span class="p-sub">Fabricated Output</span></span>
@@ -96,8 +98,10 @@
     <div class="group">
       <button class="a-pill is-dark" type="button" aria-current="page">ABOUT</button>
       <button class="a-pill" type="button" id="ab-movies">SENARIO</button>
-      <button class="a-pill sans" type="button" data-ablang="en" lang="en">English</button>
-      <button class="a-pill sans is-dark" type="button" data-ablang="ko" aria-pressed="true">국문</button>
+      <div class="lang-toggle sans" role="group" aria-label="언어 전환">
+        <button class="lt-opt" type="button" data-ablang="en" lang="en">EN</button>
+        <button class="lt-opt is-dark" type="button" data-ablang="ko" aria-pressed="true">KO</button>
+      </div>
     </div>
   </div>
   <div class="ab-stage">

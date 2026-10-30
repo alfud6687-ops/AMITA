@@ -479,6 +479,15 @@ html:has(.ks:not([hidden])) { overflow: hidden; }
 .a-pill:hover { background: #111; color: #fff; }
 .a-pill.is-dark { background: #000; color: #fff; border-color: #000; }
 .a-pill.is-dark:hover { background: #333; }
+.lang-toggle { display: flex; align-items: stretch; height: 40px; border: 1px solid #111; border-radius: var(--r-pill); overflow: hidden; }
+.lt-opt { flex: 1; min-width: 44px; height: 100%; padding: 0 16px; border: 0; background: #fff; color: #111; font: inherit; font-size: 14px; font-weight: 600; letter-spacing: .02em; cursor: pointer; transition: background 200ms var(--ax), color 200ms var(--ax); }
+.lang-toggle.sans { font-family: var(--font-sans); }
+.lt-opt.is-dark { background: #000; color: #fff; }
+.lt-opt:not(.is-dark):hover { background: rgba(0,0,0,.08); }
+.ab-bar .lang-toggle { border-color: #fff; }
+.ab-bar .lt-opt { background: transparent; color: #fff; }
+.ab-bar .lt-opt.is-dark { background: #fff; color: #111; }
+.ab-bar .lt-opt:not(.is-dark):hover { background: rgba(255,255,255,.18); }
 .a-q { position: absolute; left: 0; right: 0; top: calc(min(100vw, 177.78vh) / 1920 * 150); z-index: 4; margin: 0; padding: 0 24px; text-align: center; pointer-events: none;
   font-size: max(22px, calc(min(100vw, 177.78vh) / 1920 * 36)); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; color: #111; transition: opacity 400ms var(--ax); }
 .archive.is-open .a-q { opacity: 0; }

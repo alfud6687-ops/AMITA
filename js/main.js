@@ -105,7 +105,7 @@
     /* video ends on its own → return to the grid, same as pressing close */
     v.addEventListener('ended', function () { if (openIdx === i) closeCase(); });
     var film = li.getAttribute('data-film');
-    v.src = /^https?:\/\//.test(film) ? film : 'videos/' + film + '.mp4';
+    v.src = /^https?:\/\//.test(film) ? film : 'videos/' + film + '.mp4?v=2';
     v.preload = 'metadata';
   });
   items.forEach(function (li, i) {
