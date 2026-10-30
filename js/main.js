@@ -54,10 +54,29 @@
 
   /* archive language toggle: the filled pill is the language on screen */
   var AQ = { en: 'What is your health contents consumption type?', ko: '나의 건강 콘텐츠 소비 유형은?' };
+  var PNAMES = {
+    munjingui: { en: 'MUN JIN GUI', ko: '문진귀' },
+    bokyongsu: { en: 'BOK YONG SU', ko: '복용수' },
+    jeonpajo: { en: 'JEONPAJO', ko: '전파조' },
+    chwaryeongma: { en: 'CHWARYEONGMA', ko: '촬영마' }
+  };
+  var PSUBS = {
+    munjingui: { en: 'Cognitive Neglect', ko: '생각 방치' },
+    bokyongsu: { en: 'Unfiltered Faith', ko: '맹신' },
+    jeonpajo: { en: 'Lie Spread', ko: '허위 전파' },
+    chwaryeongma: { en: 'Fabricated Output', ko: '조작 결과' }
+  };
   Array.prototype.forEach.call(archive.querySelectorAll('[data-alang]'), function (b) {
     b.addEventListener('click', function () {
       var l = b.getAttribute('data-alang'), q = document.getElementById('a-q');
       q.textContent = AQ[l]; q.setAttribute('lang', l);
+      items.forEach(function (li) {
+        var film = li.getAttribute('data-film'), nm = PNAMES[film][l], sb = PSUBS[film][l];
+        li.querySelector('.p-name').textContent = nm; li.querySelector('.p-sub').textContent = sb;
+        var t = li.querySelector('.p-title');
+        t.querySelector('span').textContent = li.querySelector('.p-no').textContent + ' · ' + sb;
+        t.querySelector('b').textContent = nm;
+      });
       Array.prototype.forEach.call(archive.querySelectorAll('[data-alang]'), function (x) { x.classList.toggle('is-dark', x.getAttribute('data-alang') === l); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     });
   });
