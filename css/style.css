@@ -298,6 +298,9 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
 .a-bar { position: absolute; left: 0; right: 0; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; padding: 22px 28px; pointer-events: none; transition: opacity 400ms var(--ax); }
 .a-bar > * { pointer-events: auto; }
 .a-bar svg { width: 96px; height: auto; fill: var(--brand); display: block; }
+.nav-head { display: flex; flex-direction: column; gap: 4px; text-align: left; }
+.nav-title { font-size: 13px; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; }
+.nav-sub { font-size: 11px; font-weight: 500; letter-spacing: -0.01em; }
 .a-link { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: #111; background: none; border: 0; padding: 10px 0; cursor: pointer; }
 .a-link span { display: inline-block; transition: transform 300ms var(--ax); }
 .a-link:hover span { transform: translateX(4px); }
@@ -369,7 +372,7 @@ html:has(.archive:not([hidden])) { overflow: hidden; }
   .p-label { left: 20px; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
   .p-title { left: 20px; right: 20px; bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
   .p-title b { font-size: 40px; white-space: normal; }
-  .a-bar { padding: 14px 16px; } .a-bar svg { width: 72px; }
+  .a-bar { padding: 14px 16px; } .a-bar svg { width: 72px; } .a-bar .nav-head { display: none; }
   .a-close { right: 16px; top: 14px; }
 }
 
@@ -513,7 +516,8 @@ html:has(.ab:not([hidden])) { overflow: hidden; }
 .ab-bar .a-pill:not(.is-dark) { background: transparent; border-color: #fff; color: #fff; }
 .ab-bar .a-pill:not(.is-dark):hover { background: rgba(255,255,255,.18); color: #fff; }
 .ab-logo { padding: 0; border: 0; background: none; cursor: pointer; position: absolute; left: 50%; top: 30px; transform: translateX(-50%); }
-.ab-logo svg { display: block; width: 140px; height: auto; fill: var(--brand); }
+.ab-logo svg { display: block; width: 96px; height: auto; fill: var(--brand); }
+.ab-bar .nav-head { text-shadow: 0 1px 10px rgba(0,0,0,.35); }
 .ab-copy { text-shadow: 0 1px 12px rgba(0,0,0,.35); position: absolute; left: calc(118 * var(--u)); top: calc(778 * var(--u)); width: calc(1340 * var(--u)); }
 .ab-copy h2 { margin: 0; font-family: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif; font-weight: 700; font-size: max(34px, calc(64 * var(--u))); line-height: 1.05; letter-spacing: -0.02em; }
 .ab-copy p { margin: calc(56 * var(--u)) 0 0; font-size: max(15px, calc(20 * var(--u))); line-height: 1.7; letter-spacing: -0.01em; word-break: keep-all; }
@@ -521,7 +525,7 @@ html:has(.ab:not([hidden])) { overflow: hidden; }
   .ab-bg { object-position: 52% 50%; }
   .ab-stage { left: 0; top: 0; width: 100%; height: 100%; transform: none; }
   .ab-bar { padding: 16px; } .ab-bar .group { gap: 6px; }
-  .ab-logo { top: 64px; } .ab-logo svg { width: 104px; }
+  .ab-logo { top: 64px; } .ab-logo svg { width: 72px; } .ab-bar .nav-head { display: none; }
   .ab-copy { left: 20px; right: 20px; width: auto; top: auto; bottom: 28px; }
   .ab-copy p { margin-top: 14px; }
 }
